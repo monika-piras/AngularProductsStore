@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { ProductsService } from '../products.service';
+import { Product } from '../models';
 
 @Component({
   selector: 'app-category',
@@ -6,20 +8,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./category.component.css']
 })
 export class CategoryComponent implements OnInit {
+  
+  @Input() categoryCode: string;
+  products: Product[] = [];
 
-  constructor() { }
+  constructor(private productsService: ProductsService) { }
 
   ngOnInit(): void {
+    console.log('Categoria passata:', this.categoryCode);
+    this.productsService.servWorks();
+    this.products = this.productsService.getProductListFilteredByCategory(this.categoryCode);
   }
-
-  products = [
-    { title: 'Shiba Inu', subtitle: 'Dog Breed', description: ' The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan. A small, agile dog that copes'},
-    { title: 'Vic', subtitle: 'Reynolds', description: 'vic.reynolds@test.com', role: 'Admin' },
-    { title: 'Gina', subtitle: 'Jabowski', description: 'gina.jabowski@test.com', role: 'Admin' },
-    { title: 'Jessi', subtitle: 'Glaser', description: 'jessi.glaser@test.com', role: 'User' },
-    // { title: 'Jay', subtitle: 'Bilzerian', description: 'jay.bilzerian@test.com', role: 'User' },
-    // { title: 'Jay', subtitle: 'Bilzerian', description: 'jay.bilzerian@test.com', role: 'User' },
-    // { title: 'Jay', subtitle: 'Bilzerian', description: 'jay.bilzerian@test.com', role: 'User' }
-  ];
 
 }
