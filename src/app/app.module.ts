@@ -11,6 +11,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './home/home.component';
 import { CategoryComponent } from './category/category.component';
 import { CategoryDetailComponent } from './category-detail/category-detail.component';
+import { ProductDetailComponent } from './product-detail/product-detail.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { CategoryDetailComponent } from './category-detail/category-detail.compo
     HomeComponent,
     CategoryComponent,
     CategoryDetailComponent,
+    ProductDetailComponent,
   ],
   imports: [
     BrowserModule,
