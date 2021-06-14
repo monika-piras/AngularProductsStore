@@ -9,7 +9,7 @@ import { Product } from '../models';
 })
 export class CategoryComponent implements OnInit {
   
-  @Input() categoryCode: string;
+  @Input() categoryCode: string | null;
   products: Product[] = [];
 
   constructor(private productsService: ProductsService) { }
@@ -17,7 +17,9 @@ export class CategoryComponent implements OnInit {
   ngOnInit(): void {
     console.log('Categoria passata:', this.categoryCode);
     this.productsService.servWorks();
-    this.products = this.productsService.getProductListFilteredByCategory(this.categoryCode);
+    if(this.categoryCode) {
+      this.products = this.productsService.getProductListFilteredByCategory(this.categoryCode);
+    }
   }
 
 }
