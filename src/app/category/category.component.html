@@ -9,7 +9,7 @@
                         <mat-card-title>{{product.title}}</mat-card-title>
                         <!-- <mat-card-subtitle>{{product.subtitle}}</mat-card-subtitle> -->
                     </mat-card-header>
-                    <div (click)="vewItem()">
+                    <div (click)="vewItem(product.id)">
                         <img mat-card-image src={{product.image}} alt="Photo of a Shiba Inu">
                     </div>
                     <mat-card-content>
