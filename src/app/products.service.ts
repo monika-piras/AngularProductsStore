@@ -33,7 +33,7 @@ export class ProductsService {
     console.log("service is working!");
 
   }
-
+ 
   getProductList(): Product[] {
     return this.listaProdotti;
   }
@@ -42,6 +42,14 @@ export class ProductsService {
     return this.listaProdotti.filter(
       (item: Product) => {
         return item.category === category;
+      }
+    );
+  }
+
+  getProductById(id: number): Product | undefined {
+    return this.listaProdotti.find(
+      (item: Product) => {
+        return item.id === id;
       }
     );
   }

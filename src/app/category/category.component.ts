@@ -11,6 +11,7 @@ import { Router } from '@angular/router';
 export class CategoryComponent implements OnInit {
   
   @Input() categoryCode: string | null;
+  
   products: Product[] = [];
 
 
