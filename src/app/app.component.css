@@ -1,11 +1,13 @@
-/* .example-icon {
-    padding: 0 14px;
-  }
-  
-  .example-spacer {
-    flex: 1 1 auto;
-  } */
-
 a {
   color: #fff;
+  font-size: 30px;
+}
+mat-icon {
+  font-size: 34px;
+}
+.margin-style {
+  margin-left: auto;
+}
+.margin-person-icon-style, .margin-cart-icon-style{
+  margin-right: 30px;
 }

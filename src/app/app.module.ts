@@ -7,11 +7,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 import {MatCardModule} from '@angular/material/card';
+
 import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './home/home.component';
 import { CategoryComponent } from './category/category.component';
 import { CategoryDetailComponent } from './category-detail/category-detail.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
+import { MyAccountComponent } from './my-account/my-account.component';
+import { MyCartComponent } from './my-cart/my-cart.component';
+
 
 @NgModule({
   declarations: [
@@ -20,6 +24,8 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
     CategoryComponent,
     CategoryDetailComponent,
     ProductDetailComponent,
+    MyAccountComponent,
+    MyCartComponent
   ],
   imports: [
     BrowserModule,
