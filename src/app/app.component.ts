@@ -8,7 +8,6 @@ import { CartService } from './cart.service';
 })
 export class AppComponent implements OnInit {
   title = 'angular-products-store';
-
   constructor(
     private cartService: CartService
   ) { }
