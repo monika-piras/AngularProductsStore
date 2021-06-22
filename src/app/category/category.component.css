@@ -9,3 +9,6 @@ li {
     display: inline-block;
     margin: 0 0.3rem;
 }
+img {
+    cursor: pointer;
+}

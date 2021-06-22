@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CartService } from '../cart.service';
 
 @Component({
   selector: 'app-my-cart',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MyCartComponent implements OnInit {
 
-  constructor() { }
+  proprieta:number[] = [];
+
+  constructor(private cartService: CartService) { }
 
   ngOnInit(): void {
+    this.proprieta = this.cartService.getCartList();
   }
 
 }
