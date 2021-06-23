@@ -8,12 +8,12 @@ import { CartService } from '../cart.service';
 })
 export class MyCartComponent implements OnInit {
 
-  proprieta:number[] = [];
+  itemsCart:number[] = [];
 
   constructor(private cartService: CartService) { }
 
   ngOnInit(): void {
-    this.proprieta = this.cartService.getCartList();
+    this.itemsCart = this.cartService.getCartList();
   }
 
 }

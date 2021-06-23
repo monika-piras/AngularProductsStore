@@ -15,6 +15,10 @@ export class AppComponent implements OnInit {
   ngOnInit() {
   }
 
+  isBadgeVisible(): boolean {
+    return this.getTotal() < 1;
+  }
+  
   getTotal(): number {
     return this.cartService.getCartList().length;
   }

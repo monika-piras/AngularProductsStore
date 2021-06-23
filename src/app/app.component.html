@@ -15,12 +15,9 @@
       <!-- <mat-icon>person</mat-icon> -->
       <span class="margin-cart-icon-style">
         <a routerLink="/my-cart">
-          <div *ngIf="getTotal() ;then thenBlock else elseBlock">here is ignored</div>    
-          <ng-template #thenBlock><mat-icon matBadge="{{getTotal()}}" matBadgeColor="warn">shopping_cart</mat-icon></ng-template>
-          <ng-template #elseBlock><mat-icon>shopping_cart</mat-icon></ng-template>
+          <mat-icon matBadge="{{getTotal()}}" matBadgeColor="warn" [matBadgeHidden]="isBadgeVisible()" >shopping_cart</mat-icon>
         </a>
       </span>
-      <!-- <mat-icon>add_shopping_cart</mat-icon> -->
     </div>
   </mat-toolbar-row>
 </mat-toolbar>
