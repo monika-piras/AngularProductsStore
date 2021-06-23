@@ -12,9 +12,9 @@ import { CartService } from '../cart.service';
 export class CategoryComponent implements OnInit {
   
   @Input() categoryCode: string | null;
+  @Input() maxItems: number = 5;
   
   products: Product[] = [];
-
 
   constructor(
     private productsService: ProductsService,
@@ -26,7 +26,7 @@ export class CategoryComponent implements OnInit {
     console.log('Categoria passata:', this.categoryCode);
     this.productsService.servWorks();
     if(this.categoryCode) {
-      this.products = this.productsService.getProductListFilteredByCategory(this.categoryCode);
+      this.products = this.productsService.getProductListFilteredByCategory(this.categoryCode).slice(0, this.maxItems);
     }
   }
 
@@ -36,9 +36,7 @@ export class CategoryComponent implements OnInit {
     // this.router.navigateByUrl('/product-detail');
   }
 
-  addToCart(paramID:number) {
-    // console.log("added to cart" + paramID);
-    // this.router.navigate(['/my-cart']);
-    this.cartService.addItem(paramID);
+  addToCart(product:Product) {
+    this.cartService.addItem(product);
   }
 }

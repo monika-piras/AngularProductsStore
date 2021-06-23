@@ -1,25 +1,23 @@
 import { Injectable } from '@angular/core';
+import { Product } from './models';
 
 @Injectable({
   providedIn: 'root'
 })
 
 export class CartService {
-  listCart: number[] = [];
+  listCart: Product[] = [];
 
   constructor() {
     console.log("initCartServuce");
-   }
+  }
 
-   addItem(paramIdProduct: number){
-
-     console.log("added item with id " + paramIdProduct);
-     this.listCart.push(paramIdProduct);
-     console.log(this.listCart);
-   }
-
-   getCartList():number[]{
+  addItem(product: Product) {
+    console.log("added item with object " + product);
+    this.listCart.push(product);
+    console.log(this.listCart);
+  }
+  getCartList(): Product[] {
     return this.listCart;
-   }
-
+  }
 }
