@@ -2,3 +2,35 @@
 
 <h2>My Cart Products</h2>
  ------------>  {{itemsCart}}
+
+
+
+ <div class="row">
+    <div class="col-sm">
+        <ul>
+            <li *ngFor="let itemCart of itemsCart">
+                <mat-card class="example-card">
+                    <mat-card-header>
+                        <div mat-card-avatar class="example-header-image"></div>
+                        <mat-card-title>{{itemCart.title}}</mat-card-title>
+                        <!-- <mat-card-subtitle>{{product.subtitle}}</mat-card-subtitle> -->
+                    </mat-card-header>
+                    <div (click)="vewItem(itemCart.id)">
+                        <img mat-card-image src={{itemCart.image}} alt="Photo of a Shiba Inu">
+                    </div>
+                    <mat-card-content>
+                        <p>
+                            {{itemCart.description}}
+                        </p>
+                    </mat-card-content>
+                    <mat-card-actions>
+                        <button (click)="removeToCart(itemCart.id)">REMOVE</button>
+                        <!-- <button (click)="addToCart(product.id)">ADD TO CART</button> -->
+                       
+                        <!-- <button mat-button>REMOVE</button> -->
+                    </mat-card-actions>
+                </mat-card>
+            </li>
+        </ul>
+    </div>
+</div>

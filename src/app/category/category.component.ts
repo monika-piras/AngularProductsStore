@@ -12,7 +12,8 @@ import { CartService } from '../cart.service';
 export class CategoryComponent implements OnInit {
   
   @Input() categoryCode: string | null;
-  @Input() maxItems: number = 5;
+  // @Input() maxItems: number = 5;
+  @Input() maxItems: number;
   
   products: Product[] = [];
 

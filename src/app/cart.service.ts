@@ -17,7 +17,19 @@ export class CartService {
     this.listCart.push(product);
     console.log(this.listCart);
   }
+
   getCartList(): Product[] {
     return this.listCart;
+  }
+
+  removeItem(paramID:number) {
+    var index;
+
+    index = this.listCart.findIndex((item)=>{
+      return item.id === paramID;
+    });
+    console.log("item index: ", index);
+    
+    this.listCart.splice(index, 1);
   }
 }
