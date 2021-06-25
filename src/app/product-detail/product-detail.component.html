@@ -1,7 +1,17 @@
-<div class="page-style" >
-        Identificativo: {{idVar}}
+<div class="page-style">
+        <div class="row">
+                <div class="col">
+                        <h2>{{productSelected.title}}</h2>
+                        <img class="img-detail-style" src="{{productSelected.image}}" alt="">
+                </div>
+                <div class="col">
+                        <p>{{productSelected.description}}</p>
+                        <h6>Category:</h6>
+                        <mat-chip-list aria-label="Fish selection">
+                                <mat-chip>{{productSelected.category}}</mat-chip>
+                        </mat-chip-list>
 
-        <h2>{{productSelected.title}}</h2>
-        <img src="{{productSelected.image}}" alt="">
-        <p>{{productSelected.description}}</p>
+                        <button class="mt-4" (click)="addToCart(productSelected)">ADD TO CART</button>
+                </div>
+        </div>
 </div>

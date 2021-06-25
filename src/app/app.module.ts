@@ -9,7 +9,7 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatCardModule} from '@angular/material/card';
 
 import {MatBadgeModule} from '@angular/material/badge';
-
+import {MatChipsModule} from '@angular/material/chips';
 
 import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './home/home.component';
@@ -36,6 +36,7 @@ import { MyCartComponent } from './my-cart/my-cart.component';
     MatIconModule,
     MatCardModule,
     MatBadgeModule,
+    MatChipsModule,
     BrowserAnimationsModule,
     AppRoutingModule,
   ],

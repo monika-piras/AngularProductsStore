@@ -1,29 +1,23 @@
 <div class="row">
-    <div class="col-sm">
-        <ul>
-            <li *ngFor="let product of products">
-                <mat-card class="example-card">
-                    <mat-card-header>
-                        <div mat-card-avatar class="example-header-image"></div>
-                        <mat-card-title>{{product.title}}</mat-card-title>
-                        <!-- <mat-card-subtitle>{{product.subtitle}}</mat-card-subtitle> -->
-                    </mat-card-header>
-                    <div (click)="vewItem(product.id)">
-                        <img mat-card-image src={{product.image}} alt="Photo of a Shiba Inu">
-                    </div>
-                    <mat-card-content>
-                        <p>
-                            {{product.description}}
-                        </p>
-                    </mat-card-content>
-                    <mat-card-actions>
-                        <button (click)="addToCart(product)">ADD TO CART</button>
-                        <!-- <button (click)="addToCart(product.id)">ADD TO CART</button> -->
-                       
-                        <!-- <button mat-button>REMOVE</button> -->
-                    </mat-card-actions>
-                </mat-card>
-            </li>
-        </ul>
+    <div class="col-lg-3 col-sm-6 col-xs-12 p-3" *ngFor="let product of products">
+        <mat-card class="example-card">
+            <mat-card-header>
+                <div mat-card-avatar class="example-header-image"></div>
+                <mat-card-title>{{product.title}}</mat-card-title>
+                <!-- <mat-card-subtitle>{{product.subtitle}}</mat-card-subtitle> -->
+            </mat-card-header>
+            <div (click)="vewItem(product.id)">
+                <img mat-card-image src={{product.image}} alt="Photo of a Shiba Inu">
+            </div>
+            <mat-card-content>
+                <p>
+                    {{product.subtitle}}
+                </p>
+            </mat-card-content>
+            <mat-card-actions>
+                <button (click)="addToCart(product)">ADD TO CART</button>
+                <!-- <button (click)="addToCart(product.id)">ADD TO CART</button> -->
+            </mat-card-actions>
+        </mat-card>
     </div>
 </div>

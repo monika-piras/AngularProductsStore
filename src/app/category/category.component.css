@@ -4,11 +4,13 @@ ul{
     display: flex;
     overflow: hidden;
 }
-
 li {
     display: inline-block;
     margin: 0 0.3rem;
 }
 img {
     cursor: pointer;
+}
+.mat-card-image{
+    height: 350px;
 }
