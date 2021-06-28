@@ -2,6 +2,7 @@
     margin: 30px;
 }
 .img-detail-style{
-    height: 400px;
-    width: 400px;
+    height: auto;
+    width: 100%;
+    max-width: 400px;
 }

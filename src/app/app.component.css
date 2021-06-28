@@ -11,3 +11,6 @@ mat-icon {
 .margin-person-icon-style, .margin-cart-icon-style{
   margin-right: 30px;
 }
+.mat-toolbar-row, .mat-toolbar-single-row  {
+  padding: 0px;
+}
