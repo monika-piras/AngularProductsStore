@@ -6,6 +6,17 @@
     />
     <a routerLink="">Angular Store</a>
 
+    <button mat-button [matMenuTriggerFor]="menu">Categories
+      <span class="material-icons icon-style">
+        keyboard_arrow_down
+      </span>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item [routerLink]="['/category-detail', 'casa']">Casa</button>
+      <button mat-menu-item [routerLink]="['/category-detail', 'ufficio']">Ufficio</button>
+      <button mat-menu-item [routerLink]="['/category-detail', 'giardino']">Giardino</button>
+    </mat-menu>
+
     <div class="margin-style">
       <span class="margin-person-icon-style">
         <a routerLink="/my-account">
@@ -15,7 +26,7 @@
       <!-- <mat-icon>person</mat-icon> -->
       <span class="margin-cart-icon-style">
         <a routerLink="/my-cart">
-          <mat-icon matBadge="{{getTotal()}}" matBadgeColor="warn" [matBadgeHidden]="isBadgeVisible()" >shopping_cart</mat-icon>
+          <mat-icon matBadge="{{getTotal()}}" matBadgeColor="warn" [matBadgeHidden]="isBadgeVisible()">shopping_cart</mat-icon>
         </a>
       </span>
     </div>

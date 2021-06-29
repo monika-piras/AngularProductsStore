@@ -8,12 +8,15 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class CategoryDetailComponent implements OnInit {
 
-  category : string|null;
+  category: string | null;
 
-  constructor(private _Activatedroute:ActivatedRoute) { }
+  constructor(private _Activatedroute: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.category= this._Activatedroute.snapshot.paramMap.get("category");
+    this._Activatedroute.params.subscribe(params => {
+      this.category = params['category'];
+    });
+    // this.category= this._Activatedroute.snapshot.paramMap.get("category");
   }
 
 }

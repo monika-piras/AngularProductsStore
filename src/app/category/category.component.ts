@@ -11,10 +11,19 @@ import { CartService } from '../cart.service';
 })
 export class CategoryComponent implements OnInit {
   
-  @Input() categoryCode: string | null;
-  // @Input() maxItems: number = 5;
+  _categoryCode: string | null;
   @Input() maxItems: number;
   
+  get categoryCode(): string | null {
+      return this._categoryCode;
+  }
+
+  @Input() set categoryCode(value: string| null) {
+      this._categoryCode = value;
+      if(this._categoryCode) {
+        this.products = this.productsService.getProductListFilteredByCategory(this._categoryCode).slice(0, this.maxItems);
+      }
+  }
   products: Product[] = [];
 
   constructor(
@@ -25,10 +34,6 @@ export class CategoryComponent implements OnInit {
 
   ngOnInit(): void {
     console.log('Categoria passata:', this.categoryCode);
-    this.productsService.servWorks();
-    if(this.categoryCode) {
-      this.products = this.productsService.getProductListFilteredByCategory(this.categoryCode).slice(0, this.maxItems);
-    }
   }
 
   vewItem(paramID:number) {

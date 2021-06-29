@@ -14,3 +14,17 @@ mat-icon {
 .mat-toolbar-row, .mat-toolbar-single-row  {
   padding: 0px;
 }
+.mat-menu-trigger, .mat-menu-trigger:focus {
+  margin-left:30px;
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  outline:none;
+}
+.mat-focus-indicator, .mat-menu-item:focus {
+  outline: none;
+}
+.icon-style {
+  vertical-align: middle;
+}

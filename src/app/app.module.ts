@@ -18,7 +18,7 @@ import { CategoryDetailComponent } from './category-detail/category-detail.compo
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { MyAccountComponent } from './my-account/my-account.component';
 import { MyCartComponent } from './my-cart/my-cart.component';
-
+import {MatMenuModule} from '@angular/material/menu';
 
 @NgModule({
   declarations: [
@@ -28,7 +28,7 @@ import { MyCartComponent } from './my-cart/my-cart.component';
     CategoryDetailComponent,
     ProductDetailComponent,
     MyAccountComponent,
-    MyCartComponent
+    MyCartComponent,
   ],
   imports: [
     BrowserModule,
@@ -37,8 +37,9 @@ import { MyCartComponent } from './my-cart/my-cart.component';
     MatCardModule,
     MatBadgeModule,
     MatChipsModule,
+    MatMenuModule,
     BrowserAnimationsModule,
-    AppRoutingModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
