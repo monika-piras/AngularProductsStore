@@ -8,7 +8,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class CategoryDetailComponent implements OnInit {
 
-  category: string | null;
+  category: string;
 
   constructor(private _Activatedroute: ActivatedRoute) { }
 
