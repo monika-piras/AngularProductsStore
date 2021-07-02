@@ -19,6 +19,7 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
 import { MyAccountComponent } from './my-account/my-account.component';
 import { MyCartComponent } from './my-cart/my-cart.component';
 import {MatMenuModule} from '@angular/material/menu';
+import { GoBackButtonComponent } from './go-back-button/go-back-button.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import {MatMenuModule} from '@angular/material/menu';
     ProductDetailComponent,
     MyAccountComponent,
     MyCartComponent,
+    GoBackButtonComponent,
   ],
   imports: [
     BrowserModule,

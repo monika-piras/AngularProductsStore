@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
+
 @Component({
   selector: 'app-category-detail',
   templateUrl: './category-detail.component.html',
@@ -10,7 +11,8 @@ export class CategoryDetailComponent implements OnInit {
 
   category: string;
 
-  constructor(private _Activatedroute: ActivatedRoute) { }
+  constructor(private _Activatedroute: ActivatedRoute
+   ) { }
 
   ngOnInit(): void {
     this._Activatedroute.params.subscribe(params => {
@@ -18,5 +20,4 @@ export class CategoryDetailComponent implements OnInit {
     });
     // this.category= this._Activatedroute.snapshot.paramMap.get("category");
   }
-
 }

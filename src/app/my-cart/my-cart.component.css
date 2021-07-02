@@ -2,17 +2,6 @@
     margin: 30px;
 }
 
-ul{
-    list-style: none;
-
-    display: flex;
-    overflow: hidden;
-}
-
-li {
-    display: inline-block;
-    margin: 0 0.3rem;
-}
 img {
     cursor: pointer;
 }
@@ -20,3 +9,6 @@ img {
 .mat-card-image{
     height: 350px;
 }
+/* .mat-card-header .mat-card-title{
+    margin-bottom: 30px;
+} */

@@ -13,7 +13,15 @@ mat-icon {
 }
 .mat-toolbar-row, .mat-toolbar-single-row  {
   padding: 0px;
+  margin: 10px auto;
 }
+
+@media (max-width: 575.98px) { 
+  .mat-toolbar, .mat-primary, .mat-toolbar-multiple-rows {
+    width: fit-content;
+  }
+}
+
 .mat-menu-trigger, .mat-menu-trigger:focus {
   margin-left:30px;
   background-color: transparent;
