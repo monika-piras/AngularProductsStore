@@ -14,20 +14,19 @@
 
             <div class="form-group">
                 <label for="surname">Surname</label>
-                <input type="text" class="form-control" id="surname" required 
-                [(ngModel)]="model.surname" surname="surname"
-                 #surname="ngModel"
-                    [ngModelOptions]="{standalone: true}">
-                <div [hidden]="surname.valid ||surname.pristine" class="alert alert-danger">
+                <input type="text" class="form-control" id="name" required 
+                [(ngModel)]="model.surname" name="surname" 
+                 #surname="ngModel">
+                <div [hidden]="surname.valid || surname.pristine" class="alert alert-danger">
                     Surname is required
                 </div>
             </div>
 
             <div class="form-group">
                 <label for="email">Email</label>
-                <input type="text" class="form-control" id="email" required
-                 [(ngModel)]="model.email" email="email"
-                 #email="ngModel" [ngModelOptions]="{standalone: true}">
+                <input type="text" class="form-control" id="name" required
+                 [(ngModel)]="model.email" name="email"
+                 #email="ngModel">
                 <div [hidden]="email.valid || email.pristine" class="alert alert-danger">
                     Email is required
                 </div>
@@ -35,7 +34,7 @@
 
             <div class="form-group">
                 <label for="country">Country</label>
-                <select class="form-control" id="country" required 
+                <select class="form-control" id="name" required 
                 [(ngModel)]="model.country" name="country" 
                 #country="ngModel">
                     <option *ngFor="let pow of countries" [value]="pow">{{pow}}</option>

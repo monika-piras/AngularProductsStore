@@ -20,7 +20,7 @@ import { MyAccountComponent } from './my-account/my-account.component';
 import { MyCartComponent } from './my-cart/my-cart.component';
 import { MatMenuModule } from '@angular/material/menu';
 import { GoBackButtonComponent } from './go-back-button/go-back-button.component';
-import {FormsModule} from "@angular/forms";
+import { FormsModule } from "@angular/forms";
 
 @NgModule({
   declarations: [
