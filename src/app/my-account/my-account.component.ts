@@ -10,19 +10,21 @@ export class MyAccountComponent {
   countries = ['Italy', 'Spain',
             'Canada', 'Germany'];
 
-  model ={
+  model = {
     id : 18,
-    name: "Name1",
-    surname: "Surname1",
-    email: "youremail@gmail.com",
+    name: "",
+    surname: "",
+    email: "",
+    address: "",
+    postcode: "",
+    city: "",
+    province: "",
+    number: "",
     country: this.countries[0],
   }
 
-  submitted = false;
-
-  onSubmit() { this.submitted = true; }
-
-  // newHero() {
-  //   this.model = {id: 5, name:"",power:""}
-  // }
+  onSubmit() { 
+    console.log("form submitted" , this.model); 
+    alert(JSON.stringify(this.model));
+  }
 }
