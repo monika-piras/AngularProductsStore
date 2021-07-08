@@ -10,6 +10,8 @@ export class MyAccountComponent {
   countries = ['Italy', 'Spain',
             'Canada', 'Germany'];
 
+  provincies = ['SU','CA','MD','BE','TO'];
+
   model = {
     id : 18,
     name: "",
@@ -20,7 +22,7 @@ export class MyAccountComponent {
     city: "",
     province: "",
     number: "",
-    country: this.countries[0],
+    country: this.countries[0]
   }
 
   onSubmit() { 
