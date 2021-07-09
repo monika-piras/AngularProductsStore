@@ -2,9 +2,15 @@
    padding: 30px;
    margin: 0 20px;
 }
-.form-group {
-    width: 25%;
+.row {
+    width: 50%;
 }
-.postcode-style, .province-style {
-    width: 10%;
+@media (max-width: 575.98px) { 
+    .row {
+      width: 100%;
+    }
+  }
+
+.postcode-style {
+    width: 25%;
 }
