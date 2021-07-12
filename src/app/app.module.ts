@@ -10,6 +10,7 @@ import {MatCardModule} from '@angular/material/card';
 
 import {MatBadgeModule} from '@angular/material/badge';
 import {MatChipsModule} from '@angular/material/chips';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './home/home.component';
@@ -31,7 +32,7 @@ import { FormsModule } from "@angular/forms";
     ProductDetailComponent,
     MyAccountComponent,
     MyCartComponent,
-    GoBackButtonComponent,
+    GoBackButtonComponent
   ],
   imports: [
     BrowserModule,
@@ -43,7 +44,8 @@ import { FormsModule } from "@angular/forms";
     MatMenuModule,
     BrowserAnimationsModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

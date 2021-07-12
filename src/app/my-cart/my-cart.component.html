@@ -3,6 +3,8 @@
 
    <app-go-back-button></app-go-back-button>
    
+   <div *ngIf="isCartEmpty()">The Cart is Empty</div>
+
     <div class="row">
         <div class="col-lg-3 col-sm-6 col-xs-12 p-3" *ngFor="let itemCart of itemsCart">
             <mat-card class="example-card">
@@ -20,9 +22,9 @@
                 </mat-card-content>
                 <mat-card-actions>
                     <button type="button" class="btn btn-primary" (click)="removeToCart(itemCart.id)">REMOVE</button>
-                    <!-- <button (click)="addToCart(product.id)">ADD TO CART</button> -->
                 </mat-card-actions>
             </mat-card>
         </div>
     </div>
+
 </div>

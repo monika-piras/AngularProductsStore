@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-my-account',
@@ -8,10 +9,10 @@ import { Component } from '@angular/core';
 export class MyAccountComponent {
 
   countries = ['Italy', 'Spain',
-            'Canada', 'Germany'];
+    'Canada', 'Germany'];
 
   model = {
-    id : 18,
+    id: 18,
     name: "",
     surname: "",
     email: "",
@@ -21,9 +22,13 @@ export class MyAccountComponent {
     number: "",
     country: this.countries[0]
   }
-
-  onSubmit() { 
-    console.log("form submitted" , this.model); 
-    alert(JSON.stringify(this.model));
+  constructor(private _snackBar: MatSnackBar) {}
+  
+  onSubmit() {
+    console.log("form submitted", this.model);
+    // alert(JSON.stringify(this.model));
+    this._snackBar.open('Form submitted', 'Close', {
+      duration: 3000
+    });
   }
 }
