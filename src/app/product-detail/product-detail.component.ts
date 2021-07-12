@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { ProductsService } from '../products.service';
 import { Product } from '../models';
 import { CartService } from '../cart.service';
+import { NotificationService } from '../notification.service';
 
 
 @Component({
@@ -18,7 +19,8 @@ export class ProductDetailComponent implements OnInit {
 
   constructor(private _Activatedroute: ActivatedRoute,
     private productsService: ProductsService,
-    private cartService: CartService) { }
+    private cartService: CartService,
+    private notificationService: NotificationService) { }
 
   ngOnInit(): void {
     var idString = this._Activatedroute.snapshot.paramMap.get("id");
@@ -38,6 +40,7 @@ export class ProductDetailComponent implements OnInit {
   }
   addToCart(product:Product) {
     this.cartService.addItem(product);
+    this.notificationService.success('Item added to Cart');
   }
 
 }

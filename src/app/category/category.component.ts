@@ -3,7 +3,7 @@ import { ProductsService } from '../products.service';
 import { Product } from '../models';
 import { Router } from '@angular/router';
 import { CartService } from '../cart.service';
-import { MatSnackBar } from '@angular/material/snack-bar';
+import { NotificationService } from '../notification.service';
 
 @Component({
   selector: 'app-category',
@@ -21,7 +21,7 @@ export class CategoryComponent implements OnInit {
     private productsService: ProductsService,
     private router: Router,
     private cartService: CartService,
-    private _snackBar: MatSnackBar
+    private notificationService: NotificationService
   ) { }
 
   ngOnInit(): void {
@@ -50,8 +50,6 @@ export class CategoryComponent implements OnInit {
 
   addToCart(product: Product) {
     this.cartService.addItem(product);
-    this._snackBar.open('Item added to Cart', 'Close', {
-      duration: 3000
-    });
+    this.notificationService.success('Item added to Cart');
   }
 }

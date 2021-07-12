@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CartService } from '../cart.service';
 import { Product } from '../models';
 import { Router } from '@angular/router';
-import { MatSnackBar } from '@angular/material/snack-bar';
+import { NotificationService } from '../notification.service';
 
 @Component({
   selector: 'app-my-cart',
@@ -14,7 +14,7 @@ export class MyCartComponent implements OnInit {
   itemsCart: Product[] = [];
   constructor(private cartService: CartService,
     private router: Router,
-    private _snackBar: MatSnackBar) { }
+    private notificationService: NotificationService) { }
 
   ngOnInit(): void {
     this.itemsCart = this.cartService.getCartList();
@@ -27,9 +27,7 @@ export class MyCartComponent implements OnInit {
 
   removeToCart(paramID: number) {
     this.cartService.removeItem(paramID);
-    this._snackBar.open('Item removed from the Cart', 'Close', {
-      duration: 3000
-    });
+    this.notificationService.success('Item removed from Cart');
   }
 
   isCartEmpty(): boolean {

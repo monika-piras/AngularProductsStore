@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { MatSnackBar } from '@angular/material/snack-bar';
+import { NotificationService } from '../notification.service';
 
 @Component({
   selector: 'app-my-account',
@@ -22,13 +22,12 @@ export class MyAccountComponent {
     number: "",
     country: this.countries[0]
   }
-  constructor(private _snackBar: MatSnackBar) {}
-  
+  constructor(
+    private notificationService: NotificationService) { }
+
   onSubmit() {
     console.log("form submitted", this.model);
     // alert(JSON.stringify(this.model));
-    this._snackBar.open('Form submitted', 'Close', {
-      duration: 3000
-    });
+    this.notificationService.success('Form Submitted');
   }
 }
