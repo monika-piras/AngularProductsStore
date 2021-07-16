@@ -11,6 +11,9 @@ import {MatCardModule} from '@angular/material/card';
 import {MatBadgeModule} from '@angular/material/badge';
 import {MatChipsModule} from '@angular/material/chips';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { MatMenuModule } from '@angular/material/menu';
+import { FormsModule } from "@angular/forms";
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 
 import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './home/home.component';
@@ -19,9 +22,7 @@ import { CategoryDetailComponent } from './category-detail/category-detail.compo
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { MyAccountComponent } from './my-account/my-account.component';
 import { MyCartComponent } from './my-cart/my-cart.component';
-import { MatMenuModule } from '@angular/material/menu';
 import { GoBackButtonComponent } from './go-back-button/go-back-button.component';
-import { FormsModule } from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { FormsModule } from "@angular/forms";
     BrowserAnimationsModule,
     AppRoutingModule,
     FormsModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatProgressSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

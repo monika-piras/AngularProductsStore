@@ -14,6 +14,6 @@ img {
     background-color: #dc3545;
 }
 ::ng-deep.mat-simple-snackbar {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     justify-content: center !important;
 }
