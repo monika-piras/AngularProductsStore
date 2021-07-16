@@ -2,7 +2,7 @@
     <h2 class="mb-5">My Profile</h2>
 
     <mat-spinner *ngIf="isLoading"></mat-spinner>
-    <form  *ngIf="!isLoading" (ngSubmit)="onSubmit()" #heroForm="ngForm">
+    <form *ngIf="!isLoading" (ngSubmit)="onSubmit()" #heroForm="ngForm">
         <div class="row pb-5">
             <div class="col-lg-6 col-sm-12">
                 <div class="form-group">
@@ -74,14 +74,14 @@
         </div>
 
         <div class="row pb-5">
-            <!-- <div class="col-lg-6 col-sm-12">
+            <div class="col-lg-6 col-sm-12">
                 <div class="form-group ">
                     <label for="country">Country</label>
                     <select class="form-control" id="name" required [(ngModel)]="model.country" name="country" #country="ngModel">
                         <option *ngFor="let pow of countries" [value]="pow">{{pow}}</option>
                     </select>
                 </div>
-            </div> -->
+            </div>
 
             <div class="col-lg-6 col-sm-12">
                 <div class="form-group postcode-style">

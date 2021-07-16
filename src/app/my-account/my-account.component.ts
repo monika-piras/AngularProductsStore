@@ -13,8 +13,8 @@ export class MyAccountComponent implements OnInit {
 
   isLoading = false;
 
-  // countries = ['Italy', 'Spain',
-  //   'Canada', 'Germany'];
+  countries = ['Italy', 'Spain',
+    'Canada', 'Germany'];
 
   model: Profile = {
     id: 18,
@@ -25,7 +25,7 @@ export class MyAccountComponent implements OnInit {
     postcode: "",
     city: "",
     number: "",
-    // country: this.countries[0]
+    country: this.countries[0]
   }
 
   constructor(
