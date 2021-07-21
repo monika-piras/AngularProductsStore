@@ -5,12 +5,15 @@ a {
 mat-icon {
   font-size: 34px;
 }
-.margin-style {
+
+.icons-nav {
   margin-left: auto;
 }
-.margin-person-icon-style, .margin-cart-icon-style{
+
+.icons-toolbar{
   margin-right: 30px;
 }
+
 .mat-toolbar-row, .mat-toolbar-single-row  {
   padding: 0px;
   margin: 10px auto;
@@ -35,4 +38,9 @@ mat-icon {
 }
 .icon-style {
   vertical-align: middle;
+}
+
+::ng-deep mat-drawer-container{
+  width: 100% !important;
+  height: 100% !important;
 }

@@ -25,7 +25,7 @@ export class CategoryComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    console.log('Categoria passata:', this.categoryCode);
+    console.log('Category:', this.categoryCode);
     this.loadProductList();
   }
 
@@ -38,12 +38,12 @@ export class CategoryComponent implements OnInit {
   }
 
   loadProductList() {
-    var lista = this.productsService.getProductListFilteredByCategory(this.categoryCode);
-    this.products = lista.slice(0, this.maxItems?this.maxItems: lista.length );
+    var list = this.productsService.getProductListFilteredByCategory(this.categoryCode);
+    this.products = list.slice(0, this.maxItems?this.maxItems: list.length );
   }
 
   vewItem(paramID: number) {
-    console.log("clicked img" + paramID);
+    console.log("clicked img " + paramID);
     this.router.navigate(['/product-detail', paramID]);
     // this.router.navigateByUrl('/product-detail');
   }

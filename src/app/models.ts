@@ -10,12 +10,12 @@ export interface Product {
 
 export interface Profile {
   id: 18,
-  name: "",
-  surname: "",
-  email: "",
-  address: "",
-  postcode: "",
-  city: "",
-  number: "",
+  name: string,
+  surname: string,
+  email: string,
+  address: string,
+  postcode: string,
+  city: string,
+  number: string,
   country: any
 }
