@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { CartService } from './cart.service';
 
 @Component({
@@ -6,13 +6,15 @@ import { CartService } from './cart.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit {
-  title = 'angular-products-store';
 
+export class AppComponent implements OnInit {
+
+  title = 'angular-products-store';
+  
   constructor(
     private cartService: CartService
-  ) { 
-    
+  ) {
+
   }
 
   ngOnInit() {
@@ -21,7 +23,7 @@ export class AppComponent implements OnInit {
   isBadgeVisible(): boolean {
     return this.getTotal() < 1;
   }
-  
+
   getTotal(): number {
     return this.cartService.getCartList().length;
   }

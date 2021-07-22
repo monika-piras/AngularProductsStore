@@ -16,7 +16,6 @@ import { FormsModule } from "@angular/forms";
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatSidenavModule} from '@angular/material/sidenav';
 
-
 import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './home/home.component';
 import { CategoryComponent } from './category/category.component';
@@ -52,6 +51,7 @@ import { GoBackButtonComponent } from './go-back-button/go-back-button.component
     MatProgressSpinnerModule,
     MatSidenavModule
   ],
+
   providers: [],
   bootstrap: [AppComponent]
 })
