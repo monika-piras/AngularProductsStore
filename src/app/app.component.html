@@ -1,26 +1,29 @@
 <mat-drawer-container autosize>
   <mat-drawer #drawer class="sidenav" mode="over">
-    <p>Auto-resizing sidenav</p>
-    <div>
+    <div class="div-style">
       <span>
         <a routerLink="/my-account">
           <h5 class="h5-style">Profile</h5>
         </a>
       </span>
+    </div>
+
+    <div class="div-style">
       <span>
         <a routerLink="/my-cart">
           <h5 matBadge="{{getTotal()}}" matBadgeColor="warn" [matBadgeHidden]="isBadgeVisible()" class="h5-style">Cart</h5>
         </a>
       </span>
     </div>
-    <div>
-      <button mat-button [matMenuTriggerFor]="menuCopy">
+
+    <div class="div-style">
+      <button mat-button [matMenuTriggerFor]="categories" class="button-style">
         <h5 class="h5-style">Categories</h5>
         <span style="color:black" class="material-icons icon-style">
           keyboard_arrow_down
         </span>
       </button>
-      <mat-menu #menuCopy="matMenu">
+      <mat-menu #categories="matMenu">
         <button mat-menu-item [routerLink]="['/category-detail', 'home']">Home</button>
         <button mat-menu-item [routerLink]="['/category-detail', 'office']">Office</button>
         <button mat-menu-item [routerLink]="['/category-detail', 'garden']">Garden</button>

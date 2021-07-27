@@ -39,9 +39,19 @@ mat-icon {
   width: 100% !important;
   height: 100% !important;
 }
+.sidenav {
+  width: 80%;
+}
 .h5-style {
   color: black;
 }
 .mat-toolbar, .mat-primary, .mat-toolbar-multiple-rows {
   width: -webkit-fill-available;
+}
+.button-style, .button-style:focus {
+  margin: 0;
+  padding: 0;
+}
+.div-style {
+  padding: 10px;
 }

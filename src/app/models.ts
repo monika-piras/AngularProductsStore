@@ -7,7 +7,6 @@ export interface Product {
   id: number
 }
 
-
 export interface Profile {
   id: 18,
   name: string,
