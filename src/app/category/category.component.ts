@@ -39,7 +39,7 @@ export class CategoryComponent implements OnInit {
 
   loadProductList() {
     var list = this.productsService.getProductListFilteredByCategory(this.categoryCode);
-    this.products = list.slice(0, this.maxItems?this.maxItems: list.length );
+    this.products = list.slice(0, this.maxItems ? this.maxItems : list.length );
   }
 
   vewItem(paramID: number) {

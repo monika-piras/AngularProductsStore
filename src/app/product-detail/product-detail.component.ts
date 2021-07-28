@@ -38,6 +38,7 @@ export class ProductDetailComponent implements OnInit {
     }
 
   }
+  
   addToCart(product:Product) {
     this.cartService.addItem(product);
     this.notificationService.success('Item added to Cart');
