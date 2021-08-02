@@ -1,6 +1,7 @@
 a {
   color: #fff;
   font-size: 30px;
+  outline: none;
 }
 
 mat-icon {
