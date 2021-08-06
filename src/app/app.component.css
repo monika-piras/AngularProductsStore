@@ -48,6 +48,7 @@ mat-icon {
 }
 .mat-toolbar, .mat-primary, .mat-toolbar-multiple-rows {
   width: -webkit-fill-available;
+  background-color: #007bff;
 }
 .button-style, .button-style:focus {
   margin: 0;
