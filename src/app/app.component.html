@@ -2,7 +2,7 @@
   <mat-drawer #drawer class="sidenav" mode="over">
     <div class="div-style">
       <span>
-        <a routerLink="/my-account">
+        <a routerLink="/my-account" (click)="drawer.close()">
           <h5 class="h5-style">Profile</h5>
         </a>
       </span>
@@ -10,7 +10,7 @@
 
     <div class="div-style">
       <span>
-        <a routerLink="/my-cart">
+        <a routerLink="/my-cart" (click)="drawer.close()">
           <h5 matBadge="{{getTotal()}}" matBadgeColor="warn" [matBadgeHidden]="isBadgeVisible()" class="h5-style">Cart</h5>
         </a>
       </span>
@@ -24,9 +24,9 @@
         </span>
       </button>
       <mat-menu #categories="matMenu">
-        <button mat-menu-item [routerLink]="['/category-detail', 'home']">Home</button>
-        <button mat-menu-item [routerLink]="['/category-detail', 'office']">Office</button>
-        <button mat-menu-item [routerLink]="['/category-detail', 'garden']">Garden</button>
+        <button mat-menu-item [routerLink]="['/category-detail', 'home']" (click)="drawer.close()">Home</button>
+        <button mat-menu-item [routerLink]="['/category-detail', 'office']" (click)="drawer.close()">Office</button>
+        <button mat-menu-item [routerLink]="['/category-detail', 'garden']" (click)="drawer.close()">Garden</button>
       </mat-menu>
     </div>
   </mat-drawer>
@@ -65,7 +65,7 @@
 
       <div class="icons-nav d-block d-md-none">
         <span class="icons-toolbar">
-          <mat-icon (click)="drawer.toggle()">menu</mat-icon>
+          <mat-icon (click)="drawer.open()">menu</mat-icon>
         </span>
       </div>
     </mat-toolbar-row>
