@@ -1,34 +1,45 @@
 <mat-drawer-container autosize>
   <mat-drawer #drawer class="sidenav" mode="over">
-    <div class="div-style">
-      <span>
-        <a routerLink="/my-account" (click)="drawer.close()">
-          <h5 class="h5-style">Profile</h5>
-        </a>
-      </span>
+
+    <div class="header-mobile-menu">
+      <h3>Angular Store</h3>
     </div>
 
-    <div class="div-style">
-      <span>
-        <a routerLink="/my-cart" (click)="drawer.close()">
-          <h5 matBadge="{{getTotal()}}" matBadgeColor="warn" [matBadgeHidden]="isBadgeVisible()" class="h5-style">Cart</h5>
-        </a>
-      </span>
-    </div>
-
-    <div class="div-style">
-      <button mat-button [matMenuTriggerFor]="categories" class="button-style">
-        <h5 class="h5-style">Categories</h5>
-        <span style="color:black" class="material-icons icon-style">
-          keyboard_arrow_down
+    <div class="mobile-menu-style">
+      <div class="div-style">
+        <span>
+          <a routerLink="/my-account" (click)="drawer.close()">
+            <h5 class="h5-style">Profile</h5>
+          </a>
         </span>
-      </button>
-      <mat-menu #categories="matMenu">
-        <button mat-menu-item [routerLink]="['/category-detail', 'home']" (click)="drawer.close()">Home</button>
-        <button mat-menu-item [routerLink]="['/category-detail', 'office']" (click)="drawer.close()">Office</button>
-        <button mat-menu-item [routerLink]="['/category-detail', 'garden']" (click)="drawer.close()">Garden</button>
-      </mat-menu>
+      </div>
+
+      <div class="div-style">
+        <span>
+          <a routerLink="/my-cart" (click)="drawer.close()">
+            <h5 class="h5-style">
+              <span matBadge="{{getTotal()}}" matBadgeColor="warn" [matBadgeHidden]="isBadgeVisible()" matBadgeOverlap="false">Cart</span>
+            </h5>
+          </a>
+        </span>
+      </div>
+
+      <div class="div-style">
+        <button mat-button [matMenuTriggerFor]="categories" class="button-style">
+          <h5 class="h5-style">Categories</h5>
+          <span style="color:black" class="material-icons icon-style">
+            keyboard_arrow_down
+          </span>
+        </button>
+        <mat-menu #categories="matMenu">
+          <button mat-menu-item [routerLink]="['/category-detail', 'home']" (click)="drawer.close()">Home</button>
+          <button mat-menu-item [routerLink]="['/category-detail', 'office']" (click)="drawer.close()">Office</button>
+          <button mat-menu-item [routerLink]="['/category-detail', 'garden']" (click)="drawer.close()">Garden</button>
+        </mat-menu>
+      </div>
     </div>
+
+
   </mat-drawer>
 
   <!-- Toolbar -->
@@ -44,6 +55,8 @@
           keyboard_arrow_down
         </span>
       </button>
+
+
       <mat-menu #menu="matMenu">
         <button mat-menu-item [routerLink]="['/category-detail', 'home']">Home</button>
         <button mat-menu-item [routerLink]="['/category-detail', 'office']">Office</button>

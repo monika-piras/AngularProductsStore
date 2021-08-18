@@ -55,6 +55,22 @@ mat-icon {
   margin: 0;
   padding: 0;
 }
-.div-style {
+.header-mobile-menu {
+  display: block;
+  height: 15%;
+  color: #fff;
+  background-color: #007bff;
+  text-align: center;
+  padding: 20px;
+}
+.mobile-menu-style {
   padding: 10px;
+}
+.div-style {
+  padding: 15px;
+  display: block;
+  text-align: left;
+}
+::ng-deep .mat-menu-panel {
+  /* width: 350px; */
 }
