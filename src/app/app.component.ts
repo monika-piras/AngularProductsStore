@@ -11,6 +11,8 @@ export class AppComponent implements OnInit {
 
   title = 'angular-products-store';
   
+  menuDrop =  false;
+
   constructor(
     private cartService: CartService
   ) {
@@ -26,5 +28,9 @@ export class AppComponent implements OnInit {
 
   getTotal(): number {
     return this.cartService.getCartList().length;
+  }
+
+  openDropdown() {
+    return this.menuDrop = !this.menuDrop;
   }
 }

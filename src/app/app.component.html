@@ -24,8 +24,8 @@
         </span>
       </div>
 
-      <div class="div-style">
-        <button mat-button [matMenuTriggerFor]="categories" class="button-style">
+      <div class="div-style" style=" list-style-type: none;">
+        <!-- <button mat-button [matMenuTriggerFor]="categories" class="button-style">
           <h5 class="h5-style">Categories</h5>
           <span style="color:black" class="material-icons icon-style">
             keyboard_arrow_down
@@ -35,7 +35,20 @@
           <button mat-menu-item [routerLink]="['/category-detail', 'home']" (click)="drawer.close()">Home</button>
           <button mat-menu-item [routerLink]="['/category-detail', 'office']" (click)="drawer.close()">Office</button>
           <button mat-menu-item [routerLink]="['/category-detail', 'garden']" (click)="drawer.close()">Garden</button>
-        </mat-menu>
+        </mat-menu> -->
+
+
+        <li>
+          <a style="color:black; cursor:pointer;" class="dropdown-toggle" (click)="openDropdown()">
+            Categories
+          </a>
+          <hr class="dropdown-divider">
+          <ul *ngIf="menuDrop" style=" list-style-type: none;">
+            <li><a style="color:black;" class="dropdown-item" [routerLink]="['/category-detail', 'home']" (click)="drawer.close()">Home</a></li>
+            <li><a style="color:black;" class="dropdown-item" [routerLink]="['/category-detail', 'office']" (click)="drawer.close()">Office</a></li>
+            <li><a style="color:black;" class="dropdown-item" [routerLink]="['/category-detail', 'garden']" (click)="drawer.close()">Garden</a></li>
+          </ul>
+        </li>
       </div>
     </div>
 
