@@ -44,9 +44,7 @@ mat-icon {
 .sidenav {
   width: 80%;
 }
-.h5-style {
-  color: black;
-}
+
 .mat-toolbar, .mat-primary, .mat-toolbar-multiple-rows {
   width: -webkit-fill-available;
   background-color: #007bff;
@@ -66,8 +64,16 @@ mat-icon {
 .mobile-menu-style {
   padding: 10px;
 }
+.h4-style {
+  color: black;
+}
 .div-style {
   padding: 15px;
   display: block;
   text-align: left;
+  color: black;
+  cursor: pointer;
+}
+ul {
+  list-style-type: none;
 }

@@ -11,7 +11,7 @@ export class AppComponent implements OnInit {
 
   title = 'angular-products-store';
   
-  menuDrop =  false;
+  menuDrop = false;
 
   constructor(
     private cartService: CartService

@@ -7,51 +7,43 @@
 
     <div class="mobile-menu-style">
       <div class="div-style">
-        <span>
-          <a routerLink="/my-account" (click)="drawer.close()">
-            <h5 class="h5-style">Profile</h5>
-          </a>
-        </span>
+        <a routerLink="/my-account" (click)="drawer.close()">
+          <h4 class="h4-style">Profile</h4>
+        </a>
       </div>
 
       <div class="div-style">
-        <span>
-          <a routerLink="/my-cart" (click)="drawer.close()">
-            <h5 class="h5-style">
-              <span matBadge="{{getTotal()}}" matBadgeColor="warn" [matBadgeHidden]="isBadgeVisible()" matBadgeOverlap="false">Cart</span>
-            </h5>
-          </a>
-        </span>
+        <a routerLink="/my-cart" (click)="drawer.close()">
+          <h4 class="h4-style">
+            <span matBadge="{{getTotal()}}" matBadgeColor="warn" [matBadgeHidden]="isBadgeVisible()" matBadgeOverlap="false">Cart</span>
+          </h4>
+        </a>
       </div>
 
-      <div class="div-style" style=" list-style-type: none;">
-        <!-- <button mat-button [matMenuTriggerFor]="categories" class="button-style">
-          <h5 class="h5-style">Categories</h5>
-          <span style="color:black" class="material-icons icon-style">
-            keyboard_arrow_down
-          </span>
-        </button>
-        <mat-menu #categories="matMenu">
-          <button mat-menu-item [routerLink]="['/category-detail', 'home']" (click)="drawer.close()">Home</button>
-          <button mat-menu-item [routerLink]="['/category-detail', 'office']" (click)="drawer.close()">Office</button>
-          <button mat-menu-item [routerLink]="['/category-detail', 'garden']" (click)="drawer.close()">Garden</button>
-        </mat-menu> -->
-
-
-        <li>
-          <a style="color:black; cursor:pointer;" class="dropdown-toggle" (click)="openDropdown()">
-            Categories
-          </a>
-          <hr class="dropdown-divider">
-          <ul *ngIf="menuDrop" style=" list-style-type: none;">
-            <li><a style="color:black;" class="dropdown-item" [routerLink]="['/category-detail', 'home']" (click)="drawer.close()">Home</a></li>
-            <li><a style="color:black;" class="dropdown-item" [routerLink]="['/category-detail', 'office']" (click)="drawer.close()">Office</a></li>
-            <li><a style="color:black;" class="dropdown-item" [routerLink]="['/category-detail', 'garden']" (click)="drawer.close()">Garden</a></li>
-          </ul>
-        </li>
+      <div class="div-style">
+        <h4 class="h4-style" class="dropdown-toggle" (click)="openDropdown()">
+          Categories
+        </h4>
+        <hr class="dropdown-divider">
+        <ul *ngIf="menuDrop">
+          <li>
+            <a [routerLink]="['/category-detail', 'home']" (click)="drawer.close()">
+              <h4 class="h4-style">Home</h4>
+            </a>
+          </li>
+          <li>
+            <a [routerLink]="['/category-detail', 'office']" (click)="drawer.close()">
+              <h4 class="h4-style">Office</h4>
+            </a>
+          </li>
+          <li>
+            <a [routerLink]="['/category-detail', 'garden']" (click)="drawer.close()">
+              <h4 class="h4-style">Garden</h4>
+            </a>
+          </li>
+        </ul>
       </div>
     </div>
-
 
   </mat-drawer>
 
