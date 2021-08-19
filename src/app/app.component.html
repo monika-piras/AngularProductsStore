@@ -21,23 +21,23 @@
       </div>
 
       <div class="div-style">
-        <h4 class="h4-style" class="dropdown-toggle" (click)="openDropdown()">
+        <h4 class="h4-style" class="dropdown-toggle" (click)="toggleDropdown()">
           Categories
         </h4>
         <hr class="dropdown-divider">
-        <ul *ngIf="menuDrop">
+        <ul *ngIf="isMenuOpen">
           <li>
-            <a [routerLink]="['/category-detail', 'home']" (click)="drawer.close()">
+            <a [routerLink]="['/category-detail', 'home']" class="dropdown-item" (click)="drawer.close()">
               <h4 class="h4-style">Home</h4>
             </a>
           </li>
           <li>
-            <a [routerLink]="['/category-detail', 'office']" (click)="drawer.close()">
+            <a [routerLink]="['/category-detail', 'office']" class="dropdown-item" (click)="drawer.close()">
               <h4 class="h4-style">Office</h4>
             </a>
           </li>
           <li>
-            <a [routerLink]="['/category-detail', 'garden']" (click)="drawer.close()">
+            <a [routerLink]="['/category-detail', 'garden']" class="dropdown-item" (click)="drawer.close()">
               <h4 class="h4-style">Garden</h4>
             </a>
           </li>

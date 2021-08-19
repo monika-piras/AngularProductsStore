@@ -65,13 +65,12 @@ mat-icon {
   padding: 10px;
 }
 .h4-style {
-  color: black;
+  color: rgba(0,0,0,.87);
 }
 .div-style {
   padding: 15px;
   display: block;
   text-align: left;
-  color: black;
   cursor: pointer;
 }
 ul {

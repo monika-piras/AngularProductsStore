@@ -11,7 +11,7 @@ export class AppComponent implements OnInit {
 
   title = 'angular-products-store';
   
-  menuDrop = false;
+  isMenuOpen = false;
 
   constructor(
     private cartService: CartService
@@ -30,7 +30,7 @@ export class AppComponent implements OnInit {
     return this.cartService.getCartList().length;
   }
 
-  openDropdown() {
-    return this.menuDrop = !this.menuDrop;
+  toggleDropdown() {
+    return this.isMenuOpen = !this.isMenuOpen;
   }
 }
