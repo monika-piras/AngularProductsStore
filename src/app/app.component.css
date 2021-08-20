@@ -53,9 +53,9 @@ mat-icon {
   margin: 0;
   padding: 0;
 }
-.header-mobile-menu {
+.header-mobile-menu-style {
   display: block;
-  height: 18%;
+  height: 10%;
   color: #fff;
   background-color: #007bff;
   text-align: center;
