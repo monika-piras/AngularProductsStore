@@ -6,11 +6,6 @@
     </div>
 
     <div class="mobile-menu-style">
-      <div class="div-style">
-        <a routerLink="/my-account" (click)="drawer.close()">
-          <h4 class="h4-style">Profile</h4>
-        </a>
-      </div>
 
       <div class="div-style">
         <a routerLink="/my-cart" (click)="drawer.close()">
@@ -24,24 +19,32 @@
         <h4 class="h4-style" class="dropdown-toggle" (click)="toggleDropdown()">
           Categories
         </h4>
-        <hr class="dropdown-divider">
-        <ul *ngIf="isMenuOpen">
-          <li>
-            <a [routerLink]="['/category-detail', 'home']" class="dropdown-item" (click)="drawer.close()">
-              <h4 class="h4-style">Home</h4>
-            </a>
-          </li>
-          <li>
-            <a [routerLink]="['/category-detail', 'office']" class="dropdown-item" (click)="drawer.close()">
-              <h4 class="h4-style">Office</h4>
-            </a>
-          </li>
-          <li>
-            <a [routerLink]="['/category-detail', 'garden']" class="dropdown-item" (click)="drawer.close()">
-              <h4 class="h4-style">Garden</h4>
-            </a>
-          </li>
-        </ul>
+        <div class="categories-box" *ngIf="isMenuOpen">
+          <ul>
+            <li>
+              <a [routerLink]="['/category-detail', 'home']" class="dropdown-item" (click)="drawer.close()">
+                <h4 class="h4-style">Home</h4>
+              </a>
+            </li>
+            <li>
+              <a [routerLink]="['/category-detail', 'office']" class="dropdown-item" (click)="drawer.close()">
+                <h4 class="h4-style">Office</h4>
+              </a>
+            </li>
+            <li>
+              <a [routerLink]="['/category-detail', 'garden']" class="dropdown-item" (click)="drawer.close()">
+                <h4 class="h4-style">Garden</h4>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+
+      <div class="div-style">
+        <a routerLink="/my-account" (click)="drawer.close()">
+          <h4 class="h4-style">Profile</h4>
+        </a>
       </div>
     </div>
 

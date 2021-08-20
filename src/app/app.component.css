@@ -55,7 +55,7 @@ mat-icon {
 }
 .header-mobile-menu {
   display: block;
-  height: 10%;
+  height: 18%;
   color: #fff;
   background-color: #007bff;
   text-align: center;
@@ -73,6 +73,16 @@ mat-icon {
   text-align: left;
   cursor: pointer;
 }
+.categories-box {
+  border: 1px solid rgba(0,0,0,.15);
+  border-radius: .25rem;
+}
 ul {
   list-style-type: none;
+  margin-bottom: 0px;
+  padding: 5px 0px;
+}
+.dropdown-item.active, .dropdown-item:active {
+  text-decoration: none;
+  background-color: transparent;
 }
