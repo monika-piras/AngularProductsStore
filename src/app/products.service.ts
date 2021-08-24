@@ -34,10 +34,6 @@ export class ProductsService {
 
   constructor() { }
 
-  // getProductList(): Product[] {
-  //   return this.productsList;
-  // }
-
   getProductListFilteredByCategory(category: string): Product[] {
     return this.productsList.filter(
       (item: Product) => {
