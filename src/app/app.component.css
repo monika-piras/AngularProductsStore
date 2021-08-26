@@ -12,6 +12,9 @@ mat-icon {
   margin-right: 30px;
   cursor: pointer;
 }
+.amburger-menu-icon {
+  padding: 10px;
+}
 
 mat-toolbar {
   position: relative;
