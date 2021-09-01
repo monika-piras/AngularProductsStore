@@ -32,6 +32,8 @@ export class ProductsService {
 
   ];
 
+  categoryList: string[] = ["home", "office", "garden"];
+
   constructor() { }
 
   getProductListFilteredByCategory(category: string): Product[] {

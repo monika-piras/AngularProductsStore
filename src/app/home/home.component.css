@@ -2,13 +2,19 @@
     padding: 0px;
     margin: 0 20px;
 }
+h2 {
+    text-transform:capitalize;
+ }
 
-@media (max-width: 575.98px) { 
-    .page-style {
-        /* margin: 0 auto; */
+@media screen and (max-width: 575.98px) { 
+    h2 {
+        font-size: 1.5rem !important;
     }
 }
 
+.more{
+    
+}
 .margin-style {
     padding: 20px;
 }

@@ -1,36 +1,13 @@
 <div class="page-style">
-    <div class="row margin-style">
+    <div class="row margin-style" *ngFor="let category of categories">
         <h2>
-            Home Products
+            {{category}} Products
+            <span class="more">
+                <a [routerLink]="['/category-detail', category]">More>>></a>
+            </span>
         </h2>
-        <span>
-            <a [routerLink]="['/category-detail', 'home']">More>>></a>
-        </span>
+        
+        <app-category [categoryCode]="category" [maxItems]="4"></app-category>
+        
     </div>
-
-    <app-category categoryCode="home" [maxItems]="4"></app-category>
-
-
-    <div class="row margin-style">
-        <h2>
-            Office Products
-        </h2>
-        <span>
-            <a [routerLink]="['/category-detail', 'office']">More>>></a>
-        </span>
-    </div>
-
-    <app-category categoryCode="office" [maxItems]="4"></app-category>
-
-
-    <div class="row margin-style">
-        <h2>
-            Garden Products
-        </h2>
-        <span>
-            <a [routerLink]="['/category-detail', 'garden']">More>>></a>
-        </span>
-    </div>
-
-    <app-category categoryCode="garden" [maxItems]="4"></app-category>
 </div>
