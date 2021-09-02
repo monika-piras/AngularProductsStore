@@ -32,7 +32,7 @@ export class ProductsService {
 
   ];
 
-  categoryList: string[] = ["home", "office", "garden"];
+  private categoryList: string[] = ["home", "office", "garden"];
 
   constructor() { }
 
@@ -44,6 +44,10 @@ export class ProductsService {
     );
   }
 
+  getCategoryList(){
+    return this.categoryList;
+  }
+  
   getProductById(id: number): Product | undefined {
     return this.productsList.find(
       (item: Product) => {

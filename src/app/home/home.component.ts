@@ -12,11 +12,11 @@ export class HomeComponent implements OnInit {
   categories:string[] = [];
 
   ngOnInit(): void {
-    this.getCategoryList();
+    this.initCategoryList();
     console.log("categoryList: ", this.categories);
   }
 
-  getCategoryList () {
-    this.categories = this.productsService.categoryList;
+  initCategoryList () {
+    this.categories = this.productsService.getCategoryList();
   }
 }
