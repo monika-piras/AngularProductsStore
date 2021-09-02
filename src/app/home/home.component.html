@@ -2,9 +2,8 @@
     <div class="row margin-style" *ngFor="let category of categories">
         <h2>
             {{category}} Products
-            <span class="more">
-                <a [routerLink]="['/category-detail', category]">More>>></a>
-            </span>
+            
+            <a [routerLink]="['/category-detail', category]">More>>></a>
         </h2>
         
         <app-category [categoryCode]="category" [maxItems]="4"></app-category>

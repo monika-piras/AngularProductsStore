@@ -2,8 +2,9 @@
     padding: 0px;
     margin: 0 20px;
 }
+
 h2 {
-    text-transform:capitalize;
+    text-transform: capitalize;
  }
 
 @media screen and (max-width: 575.98px) { 
@@ -12,9 +13,6 @@ h2 {
     }
 }
 
-.more{
-    
-}
 .margin-style {
     padding: 20px;
 }
