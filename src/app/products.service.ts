@@ -33,7 +33,6 @@ export class ProductsService {
   ];
 
 
-
   constructor() { }
 
   getProductListFilteredByCategory(category: string): Product[] {
@@ -50,11 +49,11 @@ export class ProductsService {
 
     for (var i = 0; i < this.productsList.length; i++) {
 
-      const catergoriaProdotto = this.productsList[i].category;
-      const arr2Contains = categories.includes(catergoriaProdotto);
+      const catergoryProduct = this.productsList[i].category;
+      const arr2Contains = categories.includes( catergoryProduct);
 
       if(!arr2Contains) {
-        categories.push(catergoriaProdotto);
+        categories.push( catergoryProduct);
       }
 
     }
@@ -62,18 +61,7 @@ export class ProductsService {
 
     return categories;
 
-
-    //itera array prodotti per ognuno leggi categoria e aggiungila a list, se non già presente
-    //const list = new Set();
-
-    //1. itera array prodotti e per ogni prodotto aggiungi categoria all array
-
-    //2. semplifica output esercizio 1
-
-    //3. compara con new Set();
-
   }
-
 
   getProductById(id: number): Product | undefined {
     return this.productsList.find(

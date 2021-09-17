@@ -3,7 +3,7 @@
         <h2>
             {{category}} Products
             
-            <a [routerLink]="['/category-detail', category]">More>>></a>
+            <a [routerLink]="['/category-detail', category]"><span class="more-size">More></span></a>
         </h2>
         
         <app-category [categoryCode]="category" [maxItems]="4"></app-category>
