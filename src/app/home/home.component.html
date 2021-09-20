@@ -1,7 +1,6 @@
 <div class="page-style">
     <div class="row margin-style" *ngFor="let category of categories">
         <h2>
-            ----------> BRANCH BUILD
             {{category}} Products
             
             <a [routerLink]="['/category-detail', category]"><span class="more-size">More></span></a>
