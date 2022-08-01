@@ -5,7 +5,7 @@ file.
 
 Online demo here: https://monika-piras.github.io/AngularProductsStore/
 
-GitHub repo here: https://github.com/monika-piras/AngularProductsStore
+
 
 
 The navigation of the pages is managed with specific routes 
