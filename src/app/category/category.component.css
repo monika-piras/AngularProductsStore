@@ -1,5 +1,7 @@
 img {
     cursor: pointer;
+    width: 100%;
+    height: auto;
 }
 .mat-card-image{
     height: 350px;

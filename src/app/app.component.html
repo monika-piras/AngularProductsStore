@@ -1,21 +1,51 @@
 <mat-drawer-container autosize>
   <mat-drawer #drawer class="sidenav" mode="over">
-    <p>Auto-resizing sidenav</p>
-    <p>Lorem, ipsum dolor sit amet consectetur.</p>
-    <button mat-raised-button>
-      Toggle extra text
-    </button>
-    
-    <button mat-button [matMenuTriggerFor]="menuCopy" style="color:black">Categories
-        <span style="color:black" class="material-icons icon-style">
-          keyboard_arrow_down
-        </span>
-      </button>
-      <mat-menu #menuCopy="matMenu">
-        <button mat-menu-item [routerLink]="['/category-detail', 'home']">Home</button>
-        <button mat-menu-item [routerLink]="['/category-detail', 'office']">Office</button>
-        <button mat-menu-item [routerLink]="['/category-detail', 'garden']">Garden</button>
-      </mat-menu>
+
+    <div class="header-mobile-menu-style">
+      <h3>Angular Store</h3>
+    </div>
+
+    <div class="mobile-menu-style">
+
+      <div class="div-style">
+        <a routerLink="/my-cart" (click)="drawer.close()">
+          <h4 class="h4-style">
+            <span matBadge="{{getTotal()}}" matBadgeColor="warn" [matBadgeHidden]="isBadgeVisible()" matBadgeOverlap="false">Cart</span>
+          </h4>
+        </a>
+      </div>
+
+      <div class="div-style">
+        <h4 class="h4-style" class="dropdown-toggle" (click)="toggleDropdown()">
+          Categories
+        </h4>
+        <div class="categories-box" *ngIf="isMenuOpen">
+          <ul>
+            <li>
+              <a [routerLink]="['/category-detail', 'home']" class="dropdown-item" (click)="drawer.close()">
+                <h4 class="h4-style">Home</h4>
+              </a>
+            </li>
+            <li>
+              <a [routerLink]="['/category-detail', 'office']" class="dropdown-item" (click)="drawer.close()">
+                <h4 class="h4-style">Office</h4>
+              </a>
+            </li>
+            <li>
+              <a [routerLink]="['/category-detail', 'garden']" class="dropdown-item" (click)="drawer.close()">
+                <h4 class="h4-style">Garden</h4>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="div-style">
+        <a routerLink="/my-account" (click)="drawer.close()">
+          <h4 class="h4-style">Profile</h4>
+        </a>
+      </div>
+    </div>
 
   </mat-drawer>
 
@@ -23,23 +53,29 @@
 
   <mat-toolbar color="primary">
     <mat-toolbar-row>
-      <img width="40" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg=="
+      <img class="d-none d-sm-none d-md-block" width="40" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg=="
       />
+
+      <div class="amburger-menu-mobile d-block d-md-none">
+          <mat-icon (click)="drawer.open()" class="amburger-menu-icon">menu</mat-icon>
+      </div>
+
       <a routerLink="">Angular Store</a>
 
-      <button mat-button [matMenuTriggerFor]="menu" class="d-sm-none d-md-block">Categories
+      <button mat-button [matMenuTriggerFor]="menu" class="d-none d-sm-none d-md-block">Categories
         <span class="material-icons icon-style">
           keyboard_arrow_down
         </span>
       </button>
+
       <mat-menu #menu="matMenu">
         <button mat-menu-item [routerLink]="['/category-detail', 'home']">Home</button>
         <button mat-menu-item [routerLink]="['/category-detail', 'office']">Office</button>
         <button mat-menu-item [routerLink]="['/category-detail', 'garden']">Garden</button>
       </mat-menu>
 
-      <div class="icons-nav d-sm-none d-md-block">
-        <span class="icons-toolbar">
+      <div class="icons-nav">
+        <span class="icons-toolbar d-none d-sm-none d-md-block">
           <a routerLink="/my-account">
             <mat-icon>person_outline</mat-icon>
           </a>
@@ -51,12 +87,11 @@
         </span>
       </div>
 
-      <div class="icons-nav d-block d-md-none">
+      <!-- <div class="icons-nav d-block d-md-none">
         <span class="icons-toolbar">
-            <mat-icon (click)="drawer.toggle()">menu</mat-icon>
+          <mat-icon (click)="drawer.open()">menu</mat-icon>
         </span>
-      </div>
-
+      </div> -->
     </mat-toolbar-row>
   </mat-toolbar>
 

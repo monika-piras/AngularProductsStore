@@ -25,13 +25,13 @@ export class MyCartComponent implements OnInit {
     this.router.navigate(['/product-detail', paramID]);
   }
 
-  removeToCart(paramID: number) {
+  removeFromCart(paramID: number) {
     this.cartService.removeItem(paramID);
     this.notificationService.success('Item removed from Cart');
   }
 
   isCartEmpty(): boolean {
-    return this.itemsCart.length==0;
+    return this.itemsCart.length == 0;
   }
   
 }

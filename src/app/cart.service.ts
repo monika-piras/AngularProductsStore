@@ -9,7 +9,7 @@ export class CartService {
   listCart: Product[] = [];
 
   constructor() {
-    console.log("initCartServuce");
+    console.log("initCartService");
   }
 
   addItem(product: Product) {

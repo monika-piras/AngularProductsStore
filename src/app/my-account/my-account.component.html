@@ -125,13 +125,13 @@
                             Number is required.
                         </div>
                         <div *ngIf="number.errors?.pattern">
-                            Number must be only numbers.
+                            Phone Nr must be only numbers.
                         </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <button type="submit" class="btn btn-success" [disabled]="!heroForm.form.valid">Submit</button>
+        <button type="submit" class="btn btn-primary" [disabled]="!heroForm.form.valid">Submit</button>
     </form>
 </div>
