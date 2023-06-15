@@ -5,7 +5,7 @@
                 <div mat-card-avatar class="example-header-image"></div>
                 <mat-card-title>{{product.title}}</mat-card-title>
             </mat-card-header>
-            <div (click)="vewItem(product.id)">
+            <div class="text-center" (click)="vewItem(product.id)">
                 <img mat-card-image src={{product.image}} alt="Photo of a Product">
             </div>
             <mat-card-content>
@@ -15,7 +15,6 @@
             </mat-card-content>
             <mat-card-actions>
                 <button type="button" class="btn btn-primary" (click)="addToCart(product)">ADD TO CART</button>
-                <!-- <button (click)="addToCart(product.id)">ADD TO CART</button> -->
             </mat-card-actions>
         </mat-card>
     </div>
