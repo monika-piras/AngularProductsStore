@@ -13,8 +13,10 @@ and passage of parameters in query strings and the go-back button
 navigates back in the platform's history.
 
 
-There is also a **Notification service** of Form submitted with **Observable** feature on the
-profile.service.ts file.
+The profile form actions are handled with Observable usage in order to manage possible async scenarios.
+A Notification Service is available, and it allows to show success and error feedback messages.
+
+
 
 The user can:
 
@@ -24,6 +26,11 @@ The user can:
 - compile the form for his personal account
   with pattern controls
 - search for the products by **categories: home / office / garden**
+
+The variables to be used during the deploy are also defined:
+
+    enviroment.ts :  imagePath: '/assets/img/'
+    enviroment.prod.ts :  imagePath: '/AngularProductsStore/assets/img/'
 
 
 
@@ -36,6 +43,21 @@ npm install
 ```
 ng serve
 ```
+
+## Deploy
+```
+ng build --prod --output-path docs 
+```
+
+--prod :  in order to use proper env variables
+--output-path :  it specifies the output folder
+
+Remember to use the right base href path in the index.html of the docs folder.
+In the online demo we have:
+
+base-href="/AngularProductsStore/"
+
+
 
 ## License
 

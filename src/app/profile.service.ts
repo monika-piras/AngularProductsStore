@@ -15,6 +15,7 @@ export class ProfileService {
   save(newProfile: Profile): Observable<any> {
 
     const savingObservable$ = new Observable(observer => {
+      // it takes 2 seconds, simulating a server response delay
       setTimeout(() => {
         this.profile = newProfile;
         observer.next('contact saved');
